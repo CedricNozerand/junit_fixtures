@@ -2,10 +2,6 @@ package demoassertionjunit;
 
 import static org.junit.Assert.*;
 
-import static org.hamcrest.CoreMatchers.*;
-
-import java.util.Arrays;
-
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -84,15 +80,5 @@ public class DemoTest {
 		Integer a = Integer.valueOf(768);
 		Integer b = Integer.valueOf(700);
 		assertNotSame("Devrait ne pas avoir la même valeur", a, b);
-	}
-	
-	@Test
-	public void testAssertThatBothContainsString() {
-		assertThat("albumen", both(containsString("a")).and(containsString("b")));
-	}
-
-	@Test
-	public void testAssertThatHasItems() {
-		assertThat(Arrays.asList("one", "two", "three"), hasItems("one", "three"));
 	}
 }
